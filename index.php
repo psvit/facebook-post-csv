@@ -4,7 +4,8 @@
     FB.init({
       appId      : '1801393373482924',
       xfbml      : true,
-      version    : 'v2.8'
+      version    : 'v2.8',
+	  status	: true
     });
     FB.AppEvents.logPageView();
   };
