@@ -93,7 +93,7 @@ function getPost(){
     Post ID คือ <font color="#FF0000">1722750501373737</font> :     <br/>
     </br>
     หมายเลข PostID   <input type="text" name ="postid" id="postid">    
-    <br/>    จำนวนแถวที่ต้องการดึง   <input type="text" name="limit" id="limit">
+    <br/>    จำนวนคนที่ต้องการดึง   <input type="text" name="limit" id="limit">
     <br/>    
 
 	<input type="button" onClick="getPost();" value="Download Data">
