@@ -57,7 +57,7 @@ function getPost(){
 						  var comments = [];
 						  for (i=0;i<response.data.length;i++){
 							var comment = {
-							create_time : response.data[i].create_time,
+							created_time : response.data[i].created_time,
 							fromid : response.data[i].from.id,
 							fromname : response.data[i].from.name,
 							message : response.data[i].message,
