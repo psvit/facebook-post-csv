@@ -54,13 +54,16 @@ function getPost(){
 					  'GET',
 					  {"limit":limit},
 					  function(response) {
-						/* var comments = {
-							create_time : response.data.create_time,
-							fromid : response.data.from.id,
-							fromname : response.data.from.name,
-							message : response.data.message,
-							id : response.data.id
-						  };*/
+						  var comments = [];
+						  for (i=0;i<response.data.length;i++){
+							comments.push{
+							create_time : response.data[i].create_time,
+							fromid : response.data[i].from.id,
+							fromname : response.data[i].from.name,
+							message : response.data[i].message,
+							id : response.data[i].id
+							};
+						  }
 						  console.log(response.data);
 						  var csv = ConvertToCSV(response.data) ;
 							var downloadLink = document.createElement("a");
