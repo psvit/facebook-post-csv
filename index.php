@@ -65,8 +65,8 @@ function getPost(){
 							};
 							comments.push(comment);
 						  }
-						  console.log(response.data);
-						  var csv = ConvertToCSV(response.data) ;
+						  console.log(comments);
+						  var csv = ConvertToCSV(comments) ;
 							var downloadLink = document.createElement("a");
 							var blob = new Blob(["\ufeff", csv],{encoding:"UTF-8",type:"text/plain;charset=UTF-8"});
 							var url = URL.createObjectURL(blob);
