@@ -54,8 +54,15 @@ function getPost(){
 					  'GET',
 					  {"limit":limit},
 					  function(response) {
-						  console.log(response.data);
-						  var csv = ConvertToCSV(response.data) 
+						  var comments = {
+							create_time : response.data.create_time,
+							fromid : response.data.from.id,
+							fromname : response.data.from.name,
+							message : response.data.message,
+							id : response.data.id
+						  };
+						  
+						  var csv = ConvertToCSV(comments) 
 							var downloadLink = document.createElement("a");
 							var blob = new Blob(["\ufeff", csv],{encoding:"UTF-8",type:"text/plain;charset=UTF-8"});
 							var url = URL.createObjectURL(blob);
