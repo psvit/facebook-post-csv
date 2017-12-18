@@ -56,13 +56,14 @@ function getPost(){
 					  function(response) {
 						  var comments = [];
 						  for (i=0;i<response.data.length;i++){
-							comments.push{
+							var comment = {
 							create_time : response.data[i].create_time,
 							fromid : response.data[i].from.id,
 							fromname : response.data[i].from.name,
 							message : response.data[i].message,
 							id : response.data[i].id
 							};
+							comments.push(comment);
 						  }
 						  console.log(response.data);
 						  var csv = ConvertToCSV(response.data) ;
