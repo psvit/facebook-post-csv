@@ -40,7 +40,27 @@ function getPost(){
 							var blob = new Blob(["\ufeff", csv],{encoding:"UTF-8",type:"text/plain;charset=UTF-8"});
 							var url = URL.createObjectURL(blob);
 							downloadLink.href = url;
-							downloadLink.download = "data.csv";
+							downloadLink.download = "reactions.csv";
+						
+							document.body.appendChild(downloadLink);
+							downloadLink.click();
+							document.body.removeChild(downloadLink);
+						 // window.open("data:text/csv;charset=utf-8," + output);
+					  }
+					);
+					
+					FB.api(
+					  '/'+postid+'/comments',
+					  'GET',
+					  {"limit":limit},
+					  function(response) {
+						  
+						  var csv = ConvertToCSV(response.data) 
+							var downloadLink = document.createElement("a");
+							var blob = new Blob(["\ufeff", csv],{encoding:"UTF-8",type:"text/plain;charset=UTF-8"});
+							var url = URL.createObjectURL(blob);
+							downloadLink.href = url;
+							downloadLink.download = "comments.csv";
 						
 							document.body.appendChild(downloadLink);
 							downloadLink.click();
@@ -93,7 +113,7 @@ function getPost(){
     Post ID คือ <font color="#FF0000">1722750501373737</font> :     <br/>
     </br>
     หมายเลข PostID   <input type="text" name ="postid" id="postid">    
-    <br/>    จำนวนคนที่ต้องการดึง   <input type="text" name="limit" id="limit">
+    <br/>    จำนวนคนที่ต้องการดึง ( ใส่เผื่อๆไปสัก 10000 ก็ได้) <input type="text" name="limit" id="limit">
     <br/>    
 
 	<input type="button" onClick="getPost();" value="Download Data">
