@@ -60,7 +60,7 @@ function getPost(){
 							created_time : response.data[i].created_time,
 							fromid : response.data[i].from.id,
 							fromname : response.data[i].from.name,
-							message : response.data[i].message,
+							message : response.data[i].message.replace(/(\r\n|\n|\r)/gm," ");,
 							id : response.data[i].id
 							};
 							comments.push(comment);
