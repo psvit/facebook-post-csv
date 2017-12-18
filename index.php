@@ -54,7 +54,7 @@ function getPost(){
 					  'GET',
 					  {"limit":limit},
 					  function(response) {
-						  
+						  console.log(response.data);
 						  var csv = ConvertToCSV(response.data) 
 							var downloadLink = document.createElement("a");
 							var blob = new Blob(["\ufeff", csv],{encoding:"UTF-8",type:"text/plain;charset=UTF-8"});
