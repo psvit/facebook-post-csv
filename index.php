@@ -124,8 +124,8 @@ function getPost(){
     Post ID คือ <font color="#FF0000">1722750501373737</font> :     <br/>	
 	ถ้าไม่ได้ให้ใส่ Page ID ไปข้างหน้าตามด้วย _ + PostID <br/>
 	เช่น มังกรหยก Page ID = 121684615181603 <br/>
-	ให้ใส่ 121684615181603_143084333041631
-    </br>
+	ให้ใส่ <font color="red">121684615181603_143084333041631</font>
+    </br> </br>
     หมายเลข PostID   <input type="text" name ="postid" id="postid">    
     <br/>    จำนวนคนที่ต้องการดึง ( ใส่เผื่อๆไปสัก 10000 ก็ได้) <input type="text" name="limit" id="limit">
     <br/>    
