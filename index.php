@@ -121,7 +121,10 @@ function getPost(){
 	<div>
     ตย. Link Post นี้ https://www.facebook.com/HearthstoneTH/photos/a.1584013521914103.1073741828.1577581089224013/<font color="#FF0000">1722750501373737</font>/?type=3&theater 
     <br/> 
-    Post ID คือ <font color="#FF0000">1722750501373737</font> :     <br/>
+    Post ID คือ <font color="#FF0000">1722750501373737</font> :     <br/>	
+	ถ้าไม่ได้ให้ใส่ Page ID ไปข้างหน้าตามด้วย _ + PostID <br/>
+	เช่น มังกรหยก Page ID = 121684615181603 <br/>
+	ให้ใส่ 121684615181603_143084333041631
     </br>
     หมายเลข PostID   <input type="text" name ="postid" id="postid">    
     <br/>    จำนวนคนที่ต้องการดึง ( ใส่เผื่อๆไปสัก 10000 ก็ได้) <input type="text" name="limit" id="limit">
