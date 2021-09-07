@@ -54,6 +54,7 @@ function getPost(){
 					  'GET',
 					  {"limit":limit},
 					  function(response) {
+						  console.log(response);
 						  var comments = [];
 						  for (i=0;i<response.data.length;i++){
 							var comment = {
